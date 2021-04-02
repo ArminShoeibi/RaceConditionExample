@@ -20,7 +20,7 @@ namespace RaceConditionExample
                     for (int j = 0; j < 1000; j++)
                     {
                         myBankAccount.Deposit(100);
-                        Console.WriteLine($"TaskId: {Task.CurrentId} \t ThreadId: {Thread.CurrentThread.ManagedThreadId} \t Depositing bank account (+100) \t Current Balance:${myBankAccount.Balance}");
+                        Console.WriteLine($"TaskId: {Task.CurrentId} \t ThreadId: {Thread.CurrentThread.ManagedThreadId} \t Depositing bank account (+100) \t Current Balance: ${myBankAccount.Balance}");
                     }
                 }));
 
@@ -29,7 +29,7 @@ namespace RaceConditionExample
                     for (int j = 0; j < 1000; j++)
                     {
                         myBankAccount.Withdraw(100);
-                        Console.WriteLine($"TaskId: {Task.CurrentId} \t ThreadId: {Thread.CurrentThread.ManagedThreadId} \t Withdrawing bank account (-100) \t Current Balance:${myBankAccount.Balance}");
+                        Console.WriteLine($"TaskId: {Task.CurrentId} \t ThreadId: {Thread.CurrentThread.ManagedThreadId} \t Withdrawing bank account (-100) \t Current Balance: ${myBankAccount.Balance}");
                     }
                 }));
             }
